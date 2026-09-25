@@ -1,0 +1,200 @@
+:root {
+    --vert-fonce: #166534;
+    --vert-principal: #15803d;
+    --vert-moyen: #22c55e;
+    --vert-clair: #f0fdf4;
+    --vert-bordure: #bbf7d0;
+    --fond: #f8fafc;
+    --texte-sombre: #1e293b;
+}
+
+body {
+    background-color: var(--fond);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--texte-sombre);
+    margin: 0;
+    padding: 0;
+}
+
+/* En-tête supérieur Blanc & Vert */
+.top-header {
+    background-color: #ffffff;
+    border-bottom: 2px solid var(--vert-bordure);
+    padding: 0.75rem 0;
+}
+.header-brand {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--vert-principal);
+    text-decoration: none;
+}
+.header-brand span {
+    color: #64748b;
+    font-weight: 400;
+    font-size: 0.92rem;
+}
+
+/* Titre Facturation centré et stylisé */
+.header-facturation-title {
+    color: var(--vert-principal);
+    font-size: 1.85rem;
+    font-weight: 800;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    position: relative;
+    padding-bottom: 6px;
+    margin: 0;
+    display: inline-block;
+}
+.header-facturation-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--vert-principal), var(--vert-moyen));
+    border-radius: 2px;
+}
+
+/* Onglets sous-navigation */
+.nav-tabs-custom {
+    border-bottom: 2px solid #e2e8f0;
+    margin-top: 1.25rem;
+    margin-bottom: 1.5rem;
+}
+.nav-tabs-custom .nav-link {
+    border: none;
+    color: #64748b;
+    font-weight: 600;
+    padding: 0.65rem 1.4rem;
+    border-bottom: 3px solid transparent;
+    background: transparent;
+    margin-bottom: -2px;
+}
+.nav-tabs-custom .nav-link:hover {
+    color: var(--vert-principal);
+}
+.nav-tabs-custom .nav-link.active {
+    color: var(--vert-principal);
+    border-bottom: 3px solid var(--vert-principal);
+    background: transparent;
+}
+
+/* Boutons verts */
+.btn-vert {
+    background-color: var(--vert-principal);
+    color: #ffffff;
+    font-weight: 600;
+    border: 1px solid var(--vert-principal);
+    border-radius: 6px;
+    padding: 0.5rem 1rem;
+    font-size: 0.88rem;
+    transition: all 0.2s;
+}
+.btn-vert:hover {
+    background-color: var(--vert-fonce);
+    border-color: var(--vert-fonce);
+    color: #ffffff;
+}
+.btn-outline-vert {
+    background-color: transparent;
+    color: var(--vert-principal);
+    border: 1px solid var(--vert-principal);
+    font-weight: 600;
+    border-radius: 6px;
+    padding: 0.35rem 0.75rem;
+    font-size: 0.82rem;
+    text-decoration: none;
+    display: inline-block;
+}
+.btn-outline-vert:hover {
+    background-color: var(--vert-clair);
+    color: var(--vert-fonce);
+}
+
+/* Cartes de statistiques (KPIs) */
+.kpi-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-left: 4px solid var(--vert-principal);
+    border-radius: 6px;
+    padding: 1rem 1.25rem;
+}
+.kpi-card .kpi-label {
+    font-size: 0.8rem;
+    color: #64748b;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+.kpi-card .kpi-valeur {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--texte-sombre);
+    margin-top: 0.25rem;
+}
+.kpi-card.kpi-encaisse { border-left-color: #16a34a; }
+.kpi-card.kpi-impaye { border-left-color: #ca8a04; }
+.kpi-card.kpi-retard { border-left-color: #dc2626; }
+
+/* Tableaux blancs et épurés */
+.card-table {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 1.25rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+}
+.table-custom th {
+    background-color: #f8fafc;
+    color: #475569;
+    font-weight: 600;
+    font-size: 0.82rem;
+    border-bottom: 1px solid #e2e8f0;
+    padding: 0.75rem 0.85rem;
+}
+.table-custom td {
+    font-size: 0.86rem;
+    padding: 0.75rem 0.85rem;
+    vertical-align: middle;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+/* Badges de statut */
+.badge-payee { background-color: #dcfce7; color: #15803d; border: 1px solid #bbf7d0; font-weight: 600; }
+.badge-attente { background-color: #fef9c3; color: #854d0e; border: 1px solid #fef08a; font-weight: 600; }
+.badge-retard { background-color: #fee2e2; color: #b91c1c; border: 1px solid #fecaca; font-weight: 600; }
+
+/* Modales */
+.modal-header-vert {
+    background-color: var(--vert-principal);
+    color: #ffffff;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+}
+
+/* Barre de recherche stylisée */
+.search-container {
+    position: relative;
+    max-width: 380px;
+}
+.search-input {
+    border-radius: 20px;
+    padding-left: 2.2rem;
+    font-size: 0.88rem;
+    border: 1px solid #cbd5e1;
+}
+.search-input:focus {
+    border-color: var(--vert-principal);
+    box-shadow: 0 0 0 0.2rem rgba(21, 128, 61, 0.15);
+}
+.search-icon {
+    position: absolute;
+    left: 0.8rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #94a3b8;
+    pointer-events: none;
+}
