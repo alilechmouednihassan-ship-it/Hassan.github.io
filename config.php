@@ -1,8 +1,4 @@
 <?php
-/**
- * Configuration de l'application CC RECACT
- * Connexion à la base de données et gestion des sessions
- */
 
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
